@@ -19,6 +19,7 @@ public class addMethodTest {
 	@Test
 	public void testAddStaticMethod() {
 		System.out.println("success");
+		
 		PowerMockito.mockStatic(addMethod.class);
 		int num1=80;
 		int num2=20;

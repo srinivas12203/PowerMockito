@@ -15,19 +15,16 @@ public class addMethod {
 		
 	}
 	
-	
-
-	
-	  private int multiply(int num1,int num2) { 
+	  private  int multiply(int num1,int num2) { 
 	  int mul=num1*num2;
 	  System.out.println(mul);
 	  return mul;
 	  
 	  }
-	  public  int privateCall(int num1,int num2) {
+	  public int privateCall(int num1,int num2) {
 		  
 		  int mul= multiply(num1,num2);
-		  return mul;
+		 return mul ;
 	  }
 	 	
 }

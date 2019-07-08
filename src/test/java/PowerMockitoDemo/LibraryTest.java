@@ -7,8 +7,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
+	private addMethod addmethod = new addMethod();
     @Test public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
+        int pvt  = addmethod.privateCall(10, 20);
+		System.out.println("private call"+pvt);
         System.out.println("in library method");
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }

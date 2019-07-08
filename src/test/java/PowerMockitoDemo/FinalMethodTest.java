@@ -21,7 +21,7 @@ public class FinalMethodTest {
 	
 	private finalAddMethod finalAdd;
 	
-	@Test
+	@Test           
 	public void finalTest() {
 		finalAdd = PowerMockito.mock(finalAddMethod.class);
 		final String testInput = "A test input";
