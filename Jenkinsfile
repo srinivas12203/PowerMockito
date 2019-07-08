@@ -6,10 +6,6 @@ pipeline {
         bat 'gradle clean build'
       }
     }
-    stage('Test') {
-      steps {
-        bat 'gradle clean test'
-      }
-    }
+    
   }
 }
