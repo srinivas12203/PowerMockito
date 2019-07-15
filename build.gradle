@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+        id 'findbugs'
 }
 
 repositories {
@@ -16,7 +17,12 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
-
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
