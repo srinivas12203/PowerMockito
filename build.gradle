@@ -23,6 +23,18 @@ tasks.withType(FindBugs) {
         html.enabled = true
     }
 }
+findbugs {
+    toolVersion = "2.0.1"
+    sourceSets = [sourceSets.main]
+    ignoreFailures = true
+    reportsDir = file("$project.buildDir/findbugsReports")
+    effort = "max"
+    reportLevel = "high"
+    visitors = ["FindSqlInjection", "SwitchFallthrough"]
+    omitVisitors = ["FindNonShortCircuit"]
+    includeFilter = file("$rootProject.projectDir/config/findbugs/includeFilter.xml")
+    excludeFilter = file("$rootProject.projectDir/config/findbugs/excludeFilter.xml")
+}
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
